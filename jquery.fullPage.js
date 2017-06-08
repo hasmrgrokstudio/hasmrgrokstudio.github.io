@@ -227,19 +227,16 @@
 
         displayWarnings();
 
-        //fixing bug in iScroll with links: https://github.com/cubiq/iscroll/issues/783
+        
         iscrollOptions.click = isTouch; // see #2035
 
-        //extending iScroll options with the user custom ones
+        
         iscrollOptions = $.extend(iscrollOptions, options.scrollOverflowOptions);
 
-        //easeInOutCubic animation included in the plugin
+       
         $.extend($.easing,{ easeInOutCubic: function (x, t, b, c, d) {if ((t/=d/2) < 1) return c/2*t*t*t + b;return c/2*((t-=2)*t*t + 2) + b;}});
 
-        /**
-        * Sets the autoScroll option.
-        * It changes the scroll bar visibility and the history of the site as a result.
-        */
+       
         function setAutoScrolling(value, type){
             //removing the transformation
             if(!value){
@@ -318,9 +315,7 @@
             options.lockAnchors = value;
         }
 
-        /**
-        * Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.
-        */
+       
         function setMouseWheelScrolling(value){
             if(value){
                 addMouseWheelHandler();
@@ -331,12 +326,7 @@
             }
         }
 
-        /**
-        * Adds or remove the possibility of scrolling through sections by using the mouse wheel/trackpad or touch gestures.
-        * Optionally a second parameter can be used to specify the direction for which the action will be applied.
-        *
-        * @param directions string containing the direction or directions separated by comma.
-        */
+    
         function setAllowScrolling(value, directions){
             if(typeof directions !== 'undefined'){
                 directions = directions.replace(/ /g,'').split(',');
@@ -354,9 +344,7 @@
             }
         }
 
-        /**
-        * Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys
-        */
+      
         function setKeyboardScrolling(value, directions){
             if(typeof directions !== 'undefined'){
                 directions = directions.replace(/ /g,'').split(',');
@@ -369,9 +357,7 @@
             }
         }
 
-        /**
-        * Moves the page up one section.
-        */
+  
         function moveSectionUp(){
             var prev = $(SECTION_ACTIVE_SEL).prev(SECTION_SEL);
 
@@ -385,9 +371,6 @@
             }
         }
 
-        /**
-        * Moves the page down one section.
-        */
         function moveSectionDown(){
             var next = $(SECTION_ACTIVE_SEL).next(SECTION_SEL);
 
@@ -402,20 +385,14 @@
             }
         }
 
-        /**
-        * Moves the page to the given section and slide with no animation.
-        * Anchors or index positions can be used as params.
-        */
+ 
         function silentMoveTo(sectionAnchor, slideAnchor){
             setScrollingSpeed (0, 'internal');
             moveTo(sectionAnchor, slideAnchor);
             setScrollingSpeed (originals.scrollingSpeed, 'internal');
         }
 
-        /**
-        * Moves the page to the given section and slide.
-        * Anchors or index positions can be used as params.
-        */
+     
         function moveTo(sectionAnchor, slideAnchor){
             var destiny = getSectionByAnchor(sectionAnchor);
 
@@ -426,25 +403,16 @@
             }
         }
 
-        /**
-        * Slides right the slider of the active section.
-        * Optional `section` param.
-        */
+       
         function moveSlideRight(section){
             moveSlide('right', section);
         }
 
-        /**
-        * Slides left the slider of the active section.
-        * Optional `section` param.
-        */
+       
         function moveSlideLeft(section){
             moveSlide('left', section);
         }
 
-        /**
-         * When resizing is finished, we adjust the slides sizes and positions
-         */
         function reBuild(resizing){
             if(container.hasClass(DESTROYED)){ return; }  //nothing to do if the plugin was destroyed
 
@@ -474,7 +442,7 @@
                     }
                 }
 
-                //adjusting the position fo the FULL WIDTH slides...
+         
                 if (slides.length > 1) {
                     landscapeScroll(slidesWrap, slidesWrap.find(SLIDE_ACTIVE_SEL));
                 }
@@ -483,9 +451,9 @@
             var activeSection = $(SECTION_ACTIVE_SEL);
             var sectionIndex = activeSection.index(SECTION_SEL);
 
-            //isn't it the first section?
+       
             if(sectionIndex){
-                //adjusting the position for the current section
+           
                 silentMoveTo(sectionIndex + 1);
             }
 
@@ -494,10 +462,7 @@
             $.isFunction( options.afterReBuild ) && !resizing && options.afterReBuild.call(container);
         }
 
-        /**
-        * Turns fullPage.js to normal scrolling mode when the viewport `width` or `height`
-        * are smaller than the set limit values.
-        */
+   
         function setResponsive(active){
             var isResponsive = $body.hasClass(RESPONSIVE);
 
