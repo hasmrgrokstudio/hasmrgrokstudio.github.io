@@ -401,6 +401,7 @@ a:hover{
 			#menu li{
 			margin: 0.2vw;
    		width: 17vw;
+   		font-size:10px;
 			}
 
 		}
@@ -454,6 +455,7 @@ a:hover{
 			#menu li{
 			margin: 0.2vw;
     		width: 17vw;
+    		font-size:10px;
 			}
 }
 	
