@@ -297,6 +297,7 @@ a:hover{
 				margin: 0 auto;
 				width:90%;
 				font-size: 3em;
+				margin-top: 65%
 			}
 			 p{
 				margin: 0 auto;
@@ -398,10 +399,10 @@ a:hover{
 				width:90%;
 				font-size: 2em;
 			}
-			#menu li{
+			#menu li a, #menu li.active a{{
 			margin: 0.2vw;
    		width: 17vw;
-   		font-size:10px;
+   		font-size:16px;
 			}
 
 		}
@@ -452,10 +453,10 @@ a:hover{
 				width:90%;
 				font-size: 2em;
 			}
-			#menu li{
+			#menu li a, #menu li.active a{{
 			margin: 0.2vw;
     		width: 17vw;
-    		font-size:10px;
+    		font-size:14px;
 			}
 }
 	
