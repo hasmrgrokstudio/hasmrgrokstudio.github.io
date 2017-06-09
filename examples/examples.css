@@ -245,15 +245,17 @@ a:hover{
 	z-index: 999;
  }
 
-	@media screen and (max-width: 1136px) {
+	@media screen and (max-width: 1280px) {
 
 			h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
 			}
 			 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#section1 p{
 				margin: 0 auto;
@@ -274,6 +276,18 @@ a:hover{
 						 #introwidth h1{
 				margin: 0 auto;
 				width:90%;
+			}
+			#section4 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#section3 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#menu li{
+			margin: 0.2vw;
+   		width: 17vw;
 			}
 
 		}
@@ -282,26 +296,32 @@ a:hover{
 			h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
 			}
 			 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#section1 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#slide2 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			 #introwidth p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#introleft p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#introleft{
 				margin: 0 auto;
@@ -310,8 +330,26 @@ a:hover{
 				#introwidth h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
 			}
-
+			#section4 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#section3 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#menu li{
+			margin: 0.2vw;
+   		font-size:11px;
+   		min-width:17vw;
+			}
+			#menu li a, #menu li.active a{
+			    padding: 9px 6px;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -319,22 +357,27 @@ a:hover{
 			h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
 			}
 			 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#section1 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#slide2 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			 #introwidth p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#introleft{
 				margin: 0 auto;
@@ -343,6 +386,21 @@ a:hover{
 						 #introwidth h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
+			}
+			#section4 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#section3 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#menu li{
+			margin: 0.2vw;
+   		width: 17vw;
 			}
 
 		}
@@ -352,22 +410,27 @@ a:hover{
 			 h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
 			}
 			 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#section1 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#slide2 p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			 #introwidth p{
 				margin: 0 auto;
 				width:90%;
+				font-size: 2em;
 			}
 			#introleft{
 				margin: 0 auto;
@@ -376,6 +439,21 @@ a:hover{
 			 #introwidth h1{
 				margin: 0 auto;
 				width:90%;
+				font-size: 3em;
+			}
+			#section4 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#section3 p{
+				margin: 0 auto;
+				width:90%;
+				font-size: 2em;
+			}
+			#menu li{
+			margin: 0.2vw;
+    		width: 17vw;
 			}
 }
 	
