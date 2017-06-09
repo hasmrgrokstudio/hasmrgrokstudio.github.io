@@ -65,6 +65,10 @@ text-shadow: black 1px 1px 7px, black -1px -1px 7px,
    padding: 0;
    width: 35%;
 }
+
+
+	
+
 p{
     font-size: 1.8em;
     margin: 0 3%;
@@ -73,6 +77,8 @@ p{
     */text-shadow: black 1px 1px 7px, black -1px -1px 7px, 
                  black -1px 1px 7px;
 }
+
+	
 .intro p{
 	width: 35%;
 	margin: 0 3%;
@@ -239,3 +245,106 @@ a:hover{
 	z-index: 999;
  }
 
+
+		@media screen and (max-width: 980px) {
+
+			h1{
+				margin: 0 auto;
+				width:90%;
+			}
+			 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#section1 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#slide2 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			 #introwidth p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#introleft p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#introleft{
+				margin: 0 auto;
+				width:90%;
+			}
+				#introwidth h1{
+				margin: 0 auto;
+				width:90%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			h1{
+				margin: 0 auto;
+				width:90%;
+			}
+			 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#section1 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#slide2 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			 #introwidth p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#introleft{
+				margin: 0 auto;
+				width:90%;
+			}
+						 #introwidth h1{
+				margin: 0 auto;
+				width:90%;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			 h1{
+				margin: 0 auto;
+				width:90%;
+			}
+			 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#section1 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#slide2 p{
+				margin: 0 auto;
+				width:90%;
+			}
+			 #introwidth p{
+				margin: 0 auto;
+				width:90%;
+			}
+			#introleft{
+				margin: 0 auto;
+				width:90%;
+			}
+			 #introwidth h1{
+				margin: 0 auto;
+				width:90%;
+			}
+}
+	
