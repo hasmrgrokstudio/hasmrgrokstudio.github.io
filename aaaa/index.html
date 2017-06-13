@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="emoventsApp">
+<head>
+    <!--- Basic Page Needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Emovents – netradiciniai sporto ir pramogų renginiai įmonėms.</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+  ================================================== -->
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {        
+
+            var alphaElem = document.getElementById("alpha");
+            var betaElem =document.getElementById("beta");
+            var gammaElem = document.getElementById("gamma");
+
+            window.addEventListener("deviceorientation", function(e) 
+           {
+              alphaElem.innerHTML ='alpha value ' + Math.round(e.alpha);
+              betaElem.innerHTML = 'beta value ' + Math.round(e.beta);
+              gammaElem.innerHTML = 'gamma value ' + Math.round(e.gamma);
+           }, true);
+		});
+	</script>
+
+
+    <!-- Favicons
+	================================================== 
+	<link rel="shortcut icon" href="favicon.ico" -->
+
+	<!-- Cross  brows
+	================================================== -->
+	
+</head>
+
+<body>
+<div>
+   <p id="alpha"></p>
+   <p id="beta"></p>
+   <p id="gamma"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ремонт паркета после залива</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<meta content="" name="description">
+		
+		<meta content="" name="keywords">
+		<meta name="author" content="">
+		<link type="text/css" href="../media/css/lava/style.css" tppabs="http://3kvad.ru/media/css/lava/style.css" rel="stylesheet" />
+		<script type="text/javascript" src="../media/js/hamster/jquery.validate.min.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>			
+		<script type="text/javascript" src="../media/js/hamster/jquery.countdown.js">
+		</script>
+		<script type="text/javascript" src="../media/js/hamster/jquery.countdown-ru.js" tppabs="http://3kvad.ru/media/js/hamster/jquery.countdown-ru.js"></script>						
+		<script type="text/javascript" src="../media/js/lava/jCarouselLite.js" tppabs="http://3kvad.ru/media/js/lava/jCarouselLite.js"></script>
+		<script type="text/javascript" src="../media/js/lava/rabota.js"></script>
+		<script type="text/javascript" src="../media/js/lava/jquery.mousewheel.min.js" tppabs="http://3kvad.ru/media/js/lava/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="../media/js/lava/script.js" tppabs="http://3kvad.ru/media/js/lava/script.js"></script>
+		<link rel="shortcut icon" href="../images/favicon.ico" />
+		 <script>
+            //http://pure-essence.net/2013/10/25/how-i-made-tiny-carousel-swipeable/
+			(function($){
+			    var opts = {
+			        viewport: '.viewport'
+			        ,selected: '.dateCarouselSelected'
+			        ,prev: '.prev'
+			        ,next: '.next'
+			        ,defaultScrollDistance: 200
+			        ,scrollAnimationDuration: 500 // ms
+			    };
+
+			    $.fn.carouselSwipeable = function(options) {
+			        var options = $.extend({}, opts, options);
+			        this.each(function(){ new CarouselSwipeable($(this), options); });
+			        return this;
+			    };
+
+			    function CarouselSwipeable(root, options){
+			        /* init date carousel */
+			        var wrapper = root.find(options.viewport);
+			        var wrapperWidth = $(wrapper).outerWidth();
+
+			        var selectedElement = root.find(options.selected);
+
+			        if(selectedElement && selectedElement.length === 1) {
+			            var parentLi = selectedElement.closest('li');
+			            var childPos = parentLi.offset(); // li
+			            var parentPos = parentLi.parent().offset(); // ul
+			            var childOffset = {
+			                top: childPos.top - parentPos.top,
+			                left: childPos.left - parentPos.left
+			            };
+
+			            var startPos = childOffset.left;
+
+			            scroll('right', wrapper, startPos);
+			        }
+
+			        root.find(options.prev).on('click', function(e) {
+			            e.preventDefault();
+			            e.stopPropagation();
+			            scroll('left', wrapper, wrapperWidth);
+			        });
+			        root.find(options.next).on('click', function(e) {
+			            e.preventDefault();
+			            e.stopPropagation();
+			            scroll('right', wrapper, wrapperWidth);
+
+			        });
+
+			        function scroll(direction, innerWrapper, distance) {
+			            if(distance === undefined) {
+			                distance = options.defaultScrollDistance;
+			            }
+			            var leftPos = $(innerWrapper).scrollLeft();
+
+			            if('left' === direction) {
+			                leftPos = leftPos - distance;
+			            } else {
+			                leftPos = leftPos + distance;
+			            }
+			            $(innerWrapper).animate({scrollLeft: leftPos}, options.scrollAnimationDuration);
+			        }
+			    }
+			})(jQuery);
+
+			$('#dateCarousel').carouselSwipeable();
+        </script>		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="header">
+				<div class="content">
+					<div class="header-body">
+						<a class="logo" href="http://parcet.ru/"><img src="../media/img/lava/logo.png" tppabs="http://3kvad.ru/media/img/lava/logo.png" alt=""/></a>
+						<h1>Ассоциация<br/> Паркетчиков<br />Москвы</h1> 
+						<div class="h1-desc"></div>
+						<div class="header-phone2">
+							<p>Москва: <strong>8-495-555-38-91</strong></p>
+							<p>Санкт-Петербург: <strong>8-812-555-38-91</strong></p>
+							<p>Ежедневно с 8:00 до 22:00</p>
+						</div>
+						<div class="header-phone">
+							<p>Бесплатный звонок по России</p>
+							
+							<p><strong>8-800-555-38-91</strong></p>
+							<p class="bespl_dost">
+								Заказать звонок от мастера
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="http://parcet.ru/">Главная</a></li>
+					<li><a href="http://parcet.ru/nashi-raboty/">Наши работы</a></li>
+					<li><a href="http://parcet.ru/ciklevka/">Циклевка</a></li>
+					<li><a href="http://parcet.ru/shlifovka/">Шлифовка</a></li>
+					<li><a href="http://parcet.ru/remont/">Ремонт</a></li>
+					<li><a href="http://parcet.ru/tonirovka/">Тонировка</a></li>
+					<li><a href="http://parcet.ru/ukladka/">Укладка</a></li>
+					<li><a href="http://parcet.ru/ceny/">Цены</a></li>
+					<li><a href="http://parcet.ru/contact/">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="action">
+				<div class="content">
+					<div class="action-body">
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="what-is" class="what-is">
+				<div class="content">
+					<div class="what-is-body" id="what-is-body">
+						<h2>Ремонт паркета после залива</h2>
+						<img alt="" src="../media/img/lava/remont_parketa_5.png" style="float: right; margin-right: 20px;"/>
+						<p>
+							Залив приносит много проблем паркетному покрытию. В результате попадания влаги на паркет он вздувается, деформируются клепки. В случае если паркетное покрытие отстало от основания, то лучше его заменить. Если пол высох, и произошла деформация покрытия без отрыва от основания, то вполне можно его восстановить.
+						</p>
+						<p>
+							А что же делать, если паркет так и остался вздутым?В таком случае для устранения вздутия нужно снять поврежденный участок и переложить снова.
+						</p>
+						<p>
+							После замены участка поврежденного паркета производится циклевка с помощью циклевальной машины. Если <span>ремонт паркета после залива</span>осуществляется самостоятельно, то лучше использовать ручную машинку. Это позволит существенно сэкономить на ремонтных затратах.После циклевки производится шлифование паркета с последующим вскрытием покрытия лаком.
+						</p>
+						<p>
+							Если невозможно произвести замену поврежденного участка, производится его замена. Такой вариант иногда выгодней, чем восстановление поврежденного участка.
+						</p>
+					</div>
+					<div class="what-is-body">
+						<img alt="" src="../media/img/lava/evrofliw.png" style="float: left; margin-right: 20px;"/>
+						<h2>Циклевка паркета <br>"под ключ"</h2>
+						<p><span>Цена со скидкой 30% - 400руб.</span><strong> 8-800-555-38-91</strong></p>
+						<p>
+							1.Циклевка разными шкурками. <br>
+							2.Шпатлевка щелей между паркетом. <br>
+							3.Лакировка 3-мя слоями лака LOBA Easy Finish. <br>
+							4.Все шкурки, шпатлевка, валики. <br>
+							5.Доставка и вынос мусора. <br>
+							
+							<strong>За все 400руб. за метр. Никаких накруток.</strong></p>
+					</div>
+					<div class="razmer-body">
+						<img alt="" src="../media/img/lava/cicl_park.png" style="float: right; margin-left: 20px;"/>  
+						<h2>Еврошлифовка паркета <br>"под ключ"</h2>
+						<p><span>Цена со скидкой 30% - 600руб.</span><strong> 8-800-555-38-91</strong></p>
+						<p>
+							1.Циклевка разными шкурками. <br>
+							2.Шлифовка профессиональной машиной ТРИО. <br>
+							3.Шпатлевка щелей между паркетом. <br>
+							4.Лакировка 3-мя слоями лака LOBA Easy Finish. <br>
+							5.Все шкурки, шпатлевка, валики. <br>
+							
+							<strong>За все 600руб. за метр. Никаких накруток, цена конечная!</strong></p>
+					</div>
+					<div class="what-is-body">
+						<img alt="" src="../media/img/lava/ukladka_park.png" style="float: left; margin-right: 20px;"/>
+						<h2>Дополнительные услуги</h2>
+						<p>
+							1.Установка плинтусов:от 100р. <br>
+							2.Использование алкидного (с запахом) лака:50р. <br>
+							3.Использование двухкомпонентного лака Бона Траффик (повышенной износостойкости):250р. <br>
+							4.Тонировка паркета (в любой цвет):300р. <br>
+							5.Ремонт любой сложности:по договоренности. <br>
+							<strong>Делаем любые сопутствующие работы, звоните и спрашивайте: 8-800-555-38-91 </strong></p>
+					</div>
+				</div>
+			</div>
+		
+			<div id="why" class="why">
+				<div class="content">
+					<div class="why-body">
+						<h2>Почему тысячи людей уже выбрали нашу компанию?<br />
+						<small>Мы постарались свести Цены к минимуму</small></h2>
+						<ul class="plus-list">
+							<li>
+								<img src="../media/img/lava/plus1.png" tppabs="http://3kvad.ru/media/img/lava/plus1.png" alt=""/>
+								<h3>нет переплаты за бренд</h3>
+								<p>Работы других производителей могут быть в несколько раз дороже при аналогичном качестве</p>
+							</li>
+							<li>
+								<img src="../media/img/lava/plus2.png" tppabs="http://3kvad.ru/media/img/lava/plus2.png" alt=""/>
+								<h3>100% гарантия качества</h3>
+								<p>После циклевки, шлифовки, лакировки паркета он останеться в таком состоянии на долгое время.</p>
+							</li>
+							<li>
+								<img src="../media/img/lava/plus3.png" tppabs="http://3kvad.ru/media/img/lava/plus3.png" alt=""/>
+								<h3>Максимальный эффект</h3>
+								<p>Благодаря современному оборудованию вы получите максильманый эффект от циклевки паркета.</p>
+							</li>
+							<li>
+								<img src="../media/img/lava/plus4.png" tppabs="http://3kvad.ru/media/img/lava/plus4.png" alt=""/>
+								<h3>100% Экономия</h3>
+								<p>Сделав заказ на нашем сайте вы получите скидку до 40% на циклевку и еврошлифовку пол ключ.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="wherefore" class="wherefore">
+				<div class="content">
+					<div class="wherefore-body">
+						<div class="alt-action">
+							<div class="left" style="width: 50%">
+								<!--<div class="count-body count-static">
+									<h3>До конца акции осталось</h3>
+									<div class="count" id="defaultCountdown2"></div>
+								
+								</div>-->
+							</div>
+							<div class="left">
+								<div class="price">
+									<br />
+									<br />
+									<br />
+									<span class="text_price"> Циклевка <b>"под ключ"</b> + немецкий лак LOBA Easy Finish</span>
+									<del class="old-price-2">
+									<span class="old-price"> 520 </span>
+									</del>
+									<span class="new-price">
+										400
+										<sup>руб.</sup>
+									</span>
+								</div>
+								<div class="price">
+									<span class="text_price"> Еврошлифовка <b>"под ключ"</b> + немецкий лак LOBA Easy Finish</span>
+									<del class="old-price-2">
+									<span class="old-price"> 780 </span>
+									</del>
+									<span class="new-price">
+										600
+										<sup>руб.</sup>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<h2>Для чего Вам Циклевка паркета???</h2>
+						<ul class="plus-list">
+							<li>
+								<img src="../media/img/lava/wherefore1.png" tppabs="http://3kvad.ru/media/img/lava/wherefore1.png" alt="">
+								<h3>Украшает интерьер</h3>
+								<p>Прекрасный, отпалированный паркет - это лицо вашей квартиры.</p>
+							</li>
+							<li>
+								<img src="../media/img/lava/wherefore2.png" tppabs="http://3kvad.ru/media/img/lava/wherefore2.png" alt="">
+								<h3>Для занитий йогой :)</h3>
+								<p>Наш паркет лучше других подходит для ваших потребностей.</p>
+							</li>
+							<li>
+								<img src="../media/img/lava/wherefore3.png" tppabs="http://3kvad.ru/media/img/lava/wherefore3.png" alt="">
+								<h3>Отличный подарок</h3>
+								<p>Обновив паркет вы сделаете подарок не только близким и любимым, а самому себе. </p>
+							</li>
+							<li>
+								<img src="../media/img/lava/wherefore4.png" tppabs="http://3kvad.ru/media/img/lava/wherefore4.png" alt="">
+								<h3>Посмотрите на новый паркет ночью</h3>
+								<p>Это прекрасное переливание ночного света на вашем полу...</p>
+							</li>
+						</ul>
+						
+						<h3>Почему тысячи людей уже воспользовались нашими услугами?</h3>
+						<div class="video-frame">
+							<iframe width="500" height="350" src="//www.youtube.com/embed/4ggLehe5-V8" frameborder="0" allowfullscreen></iframe>
+						</div>
+						
+						
+						
+					</div>
+				</div>
+				
+				<div class="gallery-parent">
+					<a class="next" href="#"></a>
+					<div class="gallery">
+						<ul>
+							<li><img src="../media/img/lava/slide1.jpg" tppabs="http://3kvad.ru/media/img/lava/slide1.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide2.jpg" tppabs="http://3kvad.ru/media/img/lava/slide2.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide3.jpg" tppabs="http://3kvad.ru/media/img/lava/slide3.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide4.jpg" tppabs="http://3kvad.ru/media/img/lava/slide4.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide5.jpg" tppabs="http://3kvad.ru/media/img/lava/slide5.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide6.jpg" tppabs="http://3kvad.ru/../media/img/lava/slide6.jpg" alt="" /></li>
+							<li><img src="../media/img/lava/slide7.jpg" tppabs="http://3kvad.ru/media/img/lava/slide7.jpg" alt="" /></li>
+						</ul>
+					</div>
+					<a class="prev" href="#"></a>
+				</div>
+				
+			</div>
+			
+			<div id="shema" class="shema">
+				<div class="content">
+					<div class="shema-body">
+						<h2>Наши работы нашего магазина</h2>
+						<ul class="step-list">
+							<li>
+								<div class="step-number">1</div>
+								 <p>Вы оставляете заявку</p>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="step-number">2</div>
+								 <p>Менеджер связывается с вами в течении 15-ти минут</p>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="step-number">3</div>
+								 <p>Мастера могут приехать в день заказа или на следующий день</p>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="step-number">4</div>
+								 <p>Через 1-2 дня ваш паркет опять новый</p>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="step-number">5</div>
+								 <p>Вы пользуетесь вашим новым паркетом</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="feedback" class="feedback">
+				<div class="content">
+					<div class="feedback-body">
+						<h2>Отзывы</h2>
+						<div class="infinite-carousel">
+						<div class="carousel-viewport ">
+						    <div class="slide slide-current">
+						    	<div class="li-body">
+						    		<div class="img">
+						    			<img src="../media/img/lava/com_4.png" alt="Коментарий">
+						    		</div>
+									<dl>
+										<dt>Илья</dt>
+										<dd>г. Москва</dd>
+									</dl>
+									<p>Большая благодарность за выполненную работу, никаких нареканий просто быть не может. Всё было сделано профессионально, за кротчайшие сроки и на высоком уровне. Спасибо большое!!!</p>
+								</div>
+							</div>
+							<div class="slide">
+						    	<div class="li-body">
+						    		<div class="img">
+						    			<img src="../media/img/lava/com_1.png" alt="Коментарий">
+						    		</div>
+									<dl>
+										<dt>Настя</dt>
+										<dd>г. Москва</dd>
+									</dl>
+									<p>Если вы не хотите переплачивать за циклевку паркета, то эта кампания именно то что вы искали. Сделали красиво и в срок.</p>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="li-body">
+									<div class="img">
+						    			<img src="../media/img/lava/com_3.png" alt="Коментарий">
+						    		</div>
+									<dl>
+										<dt>Екатерина</dt>
+										<dd>г. Москва</dd>
+									</dl>
+									<p>Моему паркету уже 9 лет. Полировка,нанесение специального воска - ничего не помогало. Единственный способ - это циклевка паркета. Сдесь мне помогли. Спасибо!</p>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="li-body">
+									<div class="img">
+						    			<img src="../media/img/lava/com_2.png" alt="Коментарий">
+						    		</div>
+									<dl>
+										<dt>Виктория</dt>
+										<dd>г. Москва</dd>
+									</dl>
+									<p>Что могу сказать, ребята настоящие профессионалы. Мне даже показалось, что паркет стал выглядеть лучше чем когда был новый. Я очень довольна результатом, спасибо Вам!</p>
+								</div>
+							</div>
+
+						</div><!--.carousel-viewport-->
+
+						  <a class="carousel-control-previous" id="prevBtn"></a>
+						  <a class="carousel-control-next" id="nextBtn"></a>
+						  
+						</div><!--.infinite-carousel-->
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer" class="footer">
+				<h2>Успейте заказать циклевку паркета с <strong>30% скидкой</strong></h2>
+				<div class="content">
+					<div class="alt-action">
+							<div class="left" style="width: 50%">
+								<!--<div class="count-body count-static">
+									<h3>До конца акции осталось</h3>
+									<div class="count" id="defaultCountdown3"></div>
+								
+								</div>-->
+							</div>
+							<div class="left">
+								<div class="price">
+									<br />
+									<br />
+									<br />
+									<span class="text_price"> Циклевка <b>"под ключ"</b> + немецкий лак LOBA Easy Finish</span>
+									<del class="old-price-2">
+									<span class="old-price"> 520 </span>
+									</del>
+									<span class="new-price">
+										400
+										<sup>руб.</sup>
+									</span>
+								</div>
+								<div class="price">
+									<span class="text_price"> Еврошлифовка <b>"под ключ"</b> + немецкий лак LOBA Easy Finish</span>
+									<del class="old-price-2">
+									<span class="old-price"> 780 </span>
+									</del>
+									<span class="new-price">
+										600
+										<sup>руб.</sup>
+									</span>
+								</div>
+							</div>
+						</div>
+					<h3>Остались вопросы?</h3>
+					<p class="h3-desc">Звоните прямо сейчас.<br /> Это БЕСПЛАТНО. <strong>8-800-555-38-91</strong> или </p>
+					<div style="text-align: center">	
+						
+					</div>
+				</div>
+				<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=25430315&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25430315/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25430315,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+			</div>
+			
+			
+			
+		</div>
+		
+		<div id="modal" class="modal" style="display: none">
+			<table style="width: 100%; height: 100%;">
+				<tr>
+					<td style="vertical-align: middle">
+						<div id="ajax-loader" class="modal_body" style="text-align: center; width: 100px; padding: 20px 0; border-radius: 10px;">
+							<img src="../media/img/lava/loading_black.gif" tppabs="http://3kvad.ru/media/img/lava/loading_black.gif" alt=""/><br />
+						</div>
+												
+						<div class="modal_body action-form" id="order" style="text-align: center;">
+							<div class="loadcover" style="display: none; margin: 0;">
+								<div class="loadcoverimg"> </div>
+								<div class="loadcoverback"> </div>
+							</div>
+							<a href="#" class="cancel"></a>
+							<form id="form_order" class="index-form" action="../post2.php" method="post">
+								<h3>Оформить заявку<br /> <small style="font-size: 12px; color: #333333; display: block;">Не бойтесь ошибиться, после оформления с Вами свяжется оператор и все еще раз уточнит!</small></h3>
+								<div class="control-group">
+									<div class="input-block">
+										<input type="text" name="fio" value="" placeholder="Фамилия, Имя">
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="input-block">
+										<input type="text" name="phone" value="" placeholder="Телефон">
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="input-block">
+										<input type="text" name="address" value="" placeholder="Адрес">
+									</div>
+								</div>
+								<div class="control-group">	
+									<div class="input-block">
+										<input type="text" name="metrag" value="" placeholder="Метраж">
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="input-block">
+										<textarea name="comment" placeholder="Напишите свой заказ"></textarea>
+									</div>
+								</div>
+								<div class="control-group">	
+									<img src="../captcha.php" style="width: 130px; height:34px;  margin: 0px 15px 0 0; float:left;">
+									<div class="input-block">
+										<input type="text" name="kapcha" value="" placeholder="Числа" style="width: 110px;">
+									</div>
+								</div>
+								<button style="margin: 0 auto 0;" class="btn" name="submit">Отправить заявку</button>
+							</form>
+						</div>
+						
+						<div class="modal_body index-form" id="call_back" style="text-align: center;">
+							<div class="loadcover" style="display: none; margin: 0;">
+								<div class="loadcoverimg"> </div>
+								<div class="loadcoverback"> </div>
+							</div>
+							<a href="#" class="cancel"></a>
+							<form id="form_call" action="../post.php" method="post">
+								<h3>Заказать консультацию</h3>
+								<div class="control-group">
+									<div class="input-block">
+										<input type="text" name="name" value="" placeholder="Ввведите имя"/><br />
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="input-block">
+										<input type="text" name="call_phone" value="" placeholder="Ввведите номер телефона"/><br />
+									</div>
+								</div>
+								<div class="control-group">	
+									<img src="../captcha.php" style="width: 130px; height:34px;  margin: 0px 15px 0 0; float:left;">
+									<div class="input-block">
+										<input type="text" name="kapcha" value="" placeholder="Числа" style="width: 110px;">
+									</div>
+								</div>
+								<button style="width: 200px; margin: 0 auto"  class="btn" type="submit" name="submit_call">Заказать</button>
+								<h5 style="padding-top: 10px;">Мастер перезвонит в течении 15-ти минут</h5>
+							</form>
+						</div>
+						
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<p id="back-top">
+		   <a href="#top">К началу</a>
+		</p>
+		
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter34869355 = new Ya.Metrika({
+id:34869355,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true,
+ecommerce:"dataLayer"
+});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/34869355" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+	</body>
+</html>
+
+

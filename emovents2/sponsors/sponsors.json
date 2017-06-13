@@ -1,0 +1,52 @@
+[
+	{
+		"Sponsor": "Zradijas",
+		"File": "/emovents/sponsors/zradijas.png",
+		"Row1": "True"
+	},
+	{
+		"Sponsor": "Nissan",
+		"File": "/emovents/sponsors/nissan.png",
+		"Row1": "True"
+	},
+	{
+		"Sponsor": "Svyturys",
+		"File": "/emovents/sponsors/svyturys.png",
+		"Row1": "True"
+	},
+	{
+		"Sponsor": "Hellmann",
+		"File": "/emovents/sponsors/hellmann.png",
+		"Row1": "True"
+	},
+	{
+		"Sponsor": "Ece",
+		"File": "/emovents/sponsors/ece.png",
+		"Row1": "True"
+	},
+	{
+		"Sponsor": "Ece",
+		"File": "/emovents/sponsors/ece.png",
+		"Row2": "True"
+	},
+	{
+		"Sponsor": "Impuls",
+		"File": "/emovents/sponsors/impuls.png",
+		"Row2": "True"
+	},
+	{
+		"Sponsor": "Ups",
+		"File": "/emovents/sponsors/ups.png",
+		"Row2": "True"
+	},
+	{
+		"Sponsor": "Barclays",
+		"File": "/emovents/sponsors/barclays.png",
+		"Row2": "True"
+	},
+	{
+		"Sponsor": "Hellmann",
+		"File": "/emovents/sponsors/hellmann.png",
+		"Row2": "True"
+	}
+]

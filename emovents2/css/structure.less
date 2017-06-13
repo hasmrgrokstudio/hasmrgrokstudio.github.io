@@ -1,0 +1,129 @@
+/*===============================================*/
+/*   STRUCTURE  */
+/*===============================================*/
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+iframe{
+	border:0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, audio, canvas, video { 
+	display: block; 
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+	width:100%;
+	height: 100%;
+	color: @baseColor;
+	line-height: @lineHeight;
+	font-size: @fontSize;
+	font-family: @fontFamily;
+	.bgc(@bodyBg);
+}
+
+a {
+	color: @link;
+	.tdn;
+	.cur;
+}
+
+a:hover {
+	color: @linkHover;
+	.tdu;
+}
+
+img {
+	border:none;
+}
+input {
+	vertical-align: middle;
+}
+
+ul{
+	margin:0;
+	list-style:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+	
+	
+table
+{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+table,th, td
+{
+border: none;
+}
+
+figure {
+  position: relative;
+}
+figure img,
+figure object,
+figure embed, 
+figure video  {
+	max-width: 100%;
+	display: block;
+}
+
+/* Wrapper
+-----------------------------------------------------------------------------*/
+#wrapper {
+	height: auto !important;	
+	min-height: 100%;
+	.ma;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+header {	
+
+
+}
+
+/*Content
+-----------------------------------------------------------------------------*/
+#content {
+}
+
+#left_bar{
+	width: @leftWidth;
+	.fl;
+}
+
+#right_bar{
+	width: @rightWidth;
+	.fr;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footerWrap{
+
+	width: 100%;
+	.pr;
+}
+
+footer {
+	.ma;
+
+}

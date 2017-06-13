@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html ng-app="emoventsApp">
+<head>
+    <!--- Basic Page Needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Emovents – non traditional sportainment events for companies</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+  ================================================== -->
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+	<link rel="stylesheet" href="../css/slider.css" />
+	<link rel="stylesheet" href="../fonts/font.css" />
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/slider.js"></script>
+    <!--<script src="./js/main-animation.js"></script>-->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic,greek,latin-ext' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+	    $(document).ready(function() {            
+            $("#arrow").click(function() {
+                $('html, body').animate({
+                    scrollTop: $(".what-we-do-block").offset().top
+                }, 1000);
+            });
+            $("#content-slider").lightSlider({
+                item:1,
+                slideMargin: 0,
+                speed: 3000,
+                pause: 5500,
+                auto: true,
+                loop: true,
+                pager: false
+            });
+            $( "#main-animation img" ).animate({opacity: 1, height: "100%"}, 1000, function() {
+                $( "#main-animation .arrow" ).animate({height: "32px"}, 1000);
+                $( ".languages" ).animate({opacity: 1}, 1000);
+                $( "#main-image .main" ).fadeIn("slow");
+                $( "#main-image .main" ).css("display", "block");
+                $( "#main-animation img" ).css({"opacity": "0", "height": "0"});
+            });
+
+		});
+	</script>
+
+
+    <!-- Favicons
+	================================================== 
+	<link rel="shortcut icon" href="favicon.ico" -->
+
+	<!-- Cross  brows
+	================================================== -->
+	
+</head>
+
+<body>
+<div id="wrapper" ng-controller="commentsCtrl" ng-init="init()">
+
+	<!-- Start Main Block-->
+	<div class="main-block">
+        <div class="inner-block">
+            <ul class="languages">
+                <li class="active"><a href="http://www.emovents.lt/en/">EN</a></li>
+                <li><a href="http://www.emovents.lt/">LT</a></li>
+            </ul>
+        </div>
+        <div id="main-image">
+            <img src="../images/main-bg-2.jpg" class="main">
+        </div>
+        <div id="main-animation">
+            <img src="../images/main-bg.jpg">
+            <div id="arrow" class="arrow arrow-animation"></div>
+        </div>
+	</div>
+
+	<div class="clr"></div>
+
+	<!-- Start What we do Block-->
+	<div class="what-we-do-block pad-top-200 pad-bottom-200">
+        <div class="inner-block">
+            <ul id="content-slider" class="content-slider">
+                <li>
+                    <div class="left-block">
+                    	<div class="small">What we do</div>
+                    	<div class="text">Company</div>
+                    	<div class="text">Events</div>
+					</div>
+					<div class="right-block">
+                    	<div class="text">Great emotions -</div>
+                    	<div class="text">Guaranteed. Everything</div>
+                    	<div class="text pad-bottom-25">is taken care of</div>
+						<a href="http://www.emovents.lt/company-events/" class="button">Learn more</a>
+					</div>
+                </li>
+                <li>
+                    <div class="left-block">
+                    	<div class="small">What we do</div>
+                    	<div class="text">Hercules</div>
+                    	<div class="text">Trophy</div>
+					</div>
+					<div class="right-block">
+                    	<div class="text">Unique sportainment</div>
+                        <div class="text">festival for companies -</div>
+                        <div class="text pad-bottom-25">now in Lithuania</div>
+						<a href="http://www.herculestrophy.lt/en/" class="button">Learn more</a>
+					</div>
+                </li>
+                <li>
+                    <div class="left-block">
+                        <div class="small">What we do</div>
+                        <div class="text">Rental</div>
+                        <div class="text">Services</div>
+                    </div>
+                    <div class="right-block">
+                        <div class="text">Sports equipment</div>
+                        <div class="text">and challenges rental</div>
+                        <div class="text pad-bottom-25">with full support</div>
+                        <a href="http://www.emovents.lt/equipment-rental/" class="button">Learn more</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+	</div>
+
+	<div class="clr"></div>
+
+	<!-- Start Goal Block-->
+	<div class="goal-block pad-top-200 pad-bottom-200">
+        <div class="inner-block">
+        	<span class="icon-goal"></span>
+        	<h3>Goal</h3>
+        	<div class="text">
+        		We create and organize non traditional sports events for companies.  Our purpose is to create opportunities for corporate employees to participate in unique events and experience unforgettable emotions.
+        	</div>
+        </div>
+	</div>
+
+	<div class="clr"></div>
+
+	<!-- Start Comments Block-->
+	<div class="comments-block pad-top-200 pad-bottom-200">
+        <div class="inner-block">
+            <ul id="comments-slider" class="content-slider">
+                <li ng-repeat="comment in comments">
+                    <div class="left-block">
+                    	<div class="small">{{ comment.Name }}</div>
+                    	<div class="text">{{ comment.OrganizationFirstRow }}</div>
+                    	<div class="text">{{ comment.Name }}</div>
+					</div>
+					<div class="right-block">
+                        <div class="quote"></div>
+                    	<div class="text">{{ comment.ENG.CommentFirstRow }}</div>
+                    	<div class="text">{{ comment.ENG.CommentSecondRow }}</div>
+                    	<div class="text pad-bottom-25">{{ comment.ENG.CommentThirdRow }}</div>
+					</div>
+                </li>
+            </ul>
+            <div class="add-comment">
+                Participated already? <br>
+                <a href="#">Leave a Testimonial</a>, please!
+            </div>
+        </div>
+	</div>
+
+	<div class="clr"></div>
+
+	<!-- Start Sponsors Block-->
+	<div class="sponsors-block pad-top-160 pad-bottom-160">
+        <div class="inner-block">
+        	<ul id="sponsors-slider-first" class="sponsors-slider-first">
+                <li ng-if="sponsor.Row1" ng-repeat="sponsor in sponsors">
+                	<div>
+                		<img ng-src="{{ sponsor.File }}" alt="{{ sponsor.Sponsor}}">
+                	</div>
+                </li>
+            </ul>
+
+            <div class="clr"></div>
+
+        	<ul id="sponsors-slider-second" class="sponsors-slider-first">
+                <li ng-if="sponsor.Row2" ng-repeat="sponsor in sponsors">
+                    <div>
+                        <img ng-src="{{ sponsor.File }}" alt="{{ sponsor.Sponsor }}">
+                    </div>
+                </li>
+            </ul>
+        </div>
+	</div>
+
+    <div class="clr"></div>
+
+    <!-- Start Footer Block-->
+    <div class="footer-block">
+        <div class="contacts">
+            <h4>Contacts</h4>
+            <div class="text">
+                <a href="mailto:info@emovents.lt">info@emovents.lt</a> <br>
+                +370 67615445
+
+                <div class="copyright">
+                    ©EMOVENTS 2015
+                </div>
+            </div>
+        </div>
+        <img src="../images/main-bg-3.jpg">
+    </div>
+
+    <div class="clr"></div>
+
+    <!-- Start Subscribe Block-->
+    <div class="subscribe-block">
+        <div class="inner-block">
+            <form method="post">
+                <label for="email">Subscribe for updates</label>
+                <input type="text" name="email" id="email" placeholder="Enter Your Email" />
+                <input type="submit" class="button" value="SUBSCRIBE" />
+            </form>
+        </div>
+    </div>
+
+
+
+</div><!-- End Wrapper-->
+
+</body>
+</html>
